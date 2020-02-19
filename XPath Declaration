@@ -1,0 +1,20 @@
+public class Example {
+	
+  WebDriver driver;
+
+  @FindBy(xpath="/html/body/div[1]/div[2]/div[1]/div[1]/div[1]/div/div[2]/div/div/div[3]/div/button[2]")
+  WebElement btnOK;
+  
+  public Examples(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+		if(TestConfig.appURL.equals(TestConfig.DEV)) {
+			driver.switchTo().frame(0);
+		}
+	}
+
+  public void clickBtnOK() {
+      btnOK.click();
+  }
+
+}
