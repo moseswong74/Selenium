@@ -1,0 +1,8 @@
+	public boolean isMasterMixMenuDisplay() {
+		try {
+			return SelectMasterMix.isDisplayed();
+		}
+		catch(NoSuchElementException e) {
+			return false;
+		}
+	}
