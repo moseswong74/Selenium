@@ -1,2 +1,18 @@
+WebDriver:
+
+Example
 JavascriptExecutor js = (JavascriptExecutor) driver;  
 js.executeScript(Script,Arguments);
+js.executeScript("window.scrollBy(0,250)");
+
+
+
+IWebDriver:
+
+Example
+using OpenQA.Selenium.Interactions;
+
+var element = driver.FindElement(By.id("element-id"));
+Actions actions = new Actions(driver);
+actions.MoveToElement(element);
+actions.Perform();
