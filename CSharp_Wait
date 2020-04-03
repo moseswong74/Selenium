@@ -1,0 +1,3 @@
+Example:
+var wait = new WebDriverWait(Driver.current, Timespan.FromSeconds(10))
+wait.Until(drvr => Pages.DeckBuilder.Map.CopyDeckIcon.Displayed
