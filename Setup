@@ -1,2 +1,7 @@
 Chrome Locator
 https://chrome.google.com/webstore/detail/element-locator/pldlfgnilfdheajekfphjkjeooignhkc?hl=en
+
+Java Selenium Setup
+
+POM File
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
