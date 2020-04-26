@@ -1,0 +1,4 @@
+ // Chrome: Inspect > Click (Modal View: "Overlapsing rectange icon") > Respone Dropdown list (E.g: IphoneX)
+ 
+ // Java 
+ driver.manage().window().setSize(new Dimension(375, 812)); // (Iphone  X)
