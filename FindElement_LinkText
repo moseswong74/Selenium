@@ -1,0 +1,3 @@
+    
+    WebElement inputsLink =  driver.findElement(By.linkText("Inputs"));
+    inputsLink.click();
