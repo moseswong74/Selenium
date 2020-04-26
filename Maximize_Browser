@@ -1,8 +1,11 @@
 driver = new FirefoxDriver();
-driver.manage().window().maximize(); // Java
 
-driver.Manage().Window.Size = new Size(1366, 768); // IWebDriver
+//Java
+driver.manage().window().maximize(); 
+driver.manage().window().fullscreen();
 
-@driver.manage.window.maximize // Ruby
+//Ruby
+@driver.manage.window.maximize 
 
-driver.maximize_window() // Python
+//Python
+driver.maximize_window() 
