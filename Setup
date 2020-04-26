@@ -5,3 +5,6 @@ Java Selenium Setup
 
 POM File
 https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver
+
+API Reference
+https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/package-summary.html
