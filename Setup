@@ -7,7 +7,7 @@ Java Selenium Setup
 
 POM File
 https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver (Automate Action)
-https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support
+https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-support (For Dropdown List Support)
 https://mvnrepository.com/artifact/org.testng/testng (Verification)
 
 API Reference
