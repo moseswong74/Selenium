@@ -1,3 +1,5 @@
 import org.openqa.selenium.Keys;
 
-Keys.BACK_SPACE)
+Keys.BACK_SPACE
+
+Keys.chord(Keys.ALT,"p") // Multiple Keys
