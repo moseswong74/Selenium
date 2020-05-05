@@ -1,0 +1,7 @@
+XPATH Tester
+
+$(): Returns the first element that matches. Equivalent to document.querySelector() or calls the $ function in the page, if it exists.
+
+$$(): Returns an array of DOM nodes that match. This is like for document.querySelectorAll(), but returns an array instead of a NodeList.
+
+$x(): Evaluates an XPath expression and returns an array of matching nodes.
