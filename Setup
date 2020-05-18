@@ -19,3 +19,7 @@ https://formy-project.herokuapp.com/
 
 FireFox:
 https://github.com/mozilla/geckodriver/releases
+
+Selenium Grid
+https://www.selenium.dev/downloads/
+java -jar selenium-server-standalone-3.141.59.jar -role hub
