@@ -1,0 +1,11 @@
+
+
+private String editorIframeId = "mce_0_ifr";
+private void switchToEditArea(){
+    driver.switchTo().frame(editorIframeId);
+}
+
+// To exit out of the iframe, we're going to make another method here.
+private void switchToMainArea(){
+    driver.switchTo().parentFrame();
+}
