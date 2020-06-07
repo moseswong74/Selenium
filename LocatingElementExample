@@ -1,1 +1,8 @@
 driver.findElement(By.tagName("h1"));
+
+Locator                           CSS
+By class name "the-class"         .the-class
+By ID "the-id"                    #the-id
+By tag name "h1"                  h1
+By name "the-name"                *[name='the-name']
+
