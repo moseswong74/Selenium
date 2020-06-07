@@ -1,0 +1,5 @@
+driver.findElement(By.id("registration-form"))
+.findElement(By.xpath("//label[contains(.,'Email')]"))
+.findElement(By.tagName("input"));
+
+Chained locators are useful when you want to mix and match different locators.
