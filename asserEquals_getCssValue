@@ -7,3 +7,8 @@ WebElement div = driver.findElement(By.id("shorthand"));
     div.getCssValue("background")
 );
 }
+
+
+assertEquals("rgb(0, 0, 0)", div.getCssValue("border-color"));
+assertEquals("solid", div.getCssValue("border-style"));
+assertEquals("1px", div.getCssValue("border-width"));
