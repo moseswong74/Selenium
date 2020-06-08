@@ -1,0 +1,3 @@
+
+assertThat(driver.findElement(By.id("confirmation")).getText(),
+containsString("Purchase Confirmed."));
