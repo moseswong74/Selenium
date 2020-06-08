@@ -1,3 +1,17 @@
 
 assertThat(driver.findElement(By.id("confirmation")).getText(),
 containsString("Purchase Confirmed."));
+
+
+@Test
+public void whenPageSourceFails() throws Exception {
+    driver.get("http://localhost:8080/styled-elements.html");
+    assertThat(driver.getPageSource(),
+    anyOf(
+    containsString("<p id=\"invisible\" style=\"display:none;\">"), (1)
+    containsString("<p style=\"display:none;\" id=\"invisible\">")
+    )
+);
+assertThat(driver.getPageSource(),
+    containsString("<!-- a comment about the page -->")); (2)
+}
