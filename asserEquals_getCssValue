@@ -1,0 +1,9 @@
+@Test
+public void cssShortHandBackground() throws Exception {
+driver.get("http://localhost:8080/styled-elements.html");
+WebElement div = driver.findElement(By.id("shorthand"));
+    assertEquals(
+    "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    div.getCssValue("background")
+);
+}
