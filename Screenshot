@@ -1,0 +1,38 @@
+https://github.com/pazone/ashot (For Image Compare)
+
+Example
+
+  public Boolean comparePrinterImage(Screenshot anotherScreenshot){
+        Boolean state = false;
+        WebElement myWebElement = driver.findElement(By.cssSelector("img"));
+        Screenshot printerScreenshot = new AShot().coordsProvider(new WebDriverCoordsProvider())
+                                                  .takeScreenshot(driver, myWebElement);
+        ImageDiff diff = new ImageDiffer().makeDiff(printerScreenshot, anotherScreenshot);
+        if (diff.hasDiff()){
+            state = false;
+        }
+        else{
+            state = true;
+        }
+        return state;
+    }
+
+   @Test
+    public void CheckPrinterImage() throws IOException, ConnectionException {
+        String printerModel = printerUtilities.getSettingValueViaSGD(printer_ip_addr, "device.product_name");
+        System.out.println("Comparing Against Printer Image: "+printerModel);
+        File printerImageFile = new File(String.valueOf(
+                Paths.get("resources/PrinterImage/zebra-"+printerModel.toLowerCase()+".png")));
+        if (printerImageFile.exists()){
+            Screenshot printerImage =
+                    new Screenshot(ImageIO.read(printerImageFile));
+            // Assert False to Ensure There is No Diff In Image Comprison.
+            assertFalse(printers_connectedPrinterLandingPage.comparePrinterImage(printerImage));
+      }
+        else{
+            Screenshot printerImage =
+                    new Screenshot(ImageIO.read(new File(String.valueOf(
+                            Paths.get("resources/PrinterImage/zebra-default.png")))));
+            assertFalse(printers_connectedPrinterLandingPage.comparePrinterImage(printerImage));
+        }
+    }
