@@ -9,6 +9,7 @@ By name "the-name"                *[name='the-name']
 
 XPath Example:
 //*[starts-with(@style,'display')]
-//*[starts-with(@font-size,'14')and contains(text(), 'Labels')]
+//*[starts-with(@font-size,'14') and contains(text(), 'Labels')]
+//*[starts-with(@data-test-id,'template-search-item') and .//*[@style="display"]]
 //*[@placeholder="Search Templates"]
-
+//*[contains(text(), 'Labels')]
