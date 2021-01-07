@@ -1,0 +1,8 @@
+            URL url = new URL("www.yahoo.com");
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.connect();
+
+            int code = connection.getResponseCode();
+            System.out.println("Response code of the object is " + code);
+            assertEquals(code, 200, "Error due to");
