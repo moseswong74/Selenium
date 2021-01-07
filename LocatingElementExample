@@ -13,3 +13,5 @@ XPath Example:
 //*[starts-with(@data-test-id,'template-search-item') and .//*[@style="display"]]
 //*[@placeholder="Search Templates"]
 //*[contains(text(), 'Labels')]
+ .//*[normalize-space(text())='Address']
+ //button[text()='Cancel']
