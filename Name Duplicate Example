@@ -3,3 +3,5 @@
  private By headerAddress = By.xpath("//*[contains(@font-size,'24') and contains(text(), 'Address')]");
 
  private By templateAddress = By.xpath("//*[starts-with(@data-test-id,'current-template-name') and contains(text(), 'Address')]");
+ 
+ .//*[normalize-space(text())='Address']
