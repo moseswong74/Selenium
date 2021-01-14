@@ -1,0 +1,11 @@
+
+
+ public LinkedList<String> getSearchTemplateNames(){
+        LinkedList<String> templateSearchResults = new LinkedList<String>();
+        java.util.List<WebElement> templateNames = driver.findElements(SearchTemplateNames);
+        for(int i =0;i<templateNames.size();i++) {
+            String elementText = templateNames.get(i).getText();
+            System.out.println(elementText);
+            templateSearchResults.add(elementText);
+        }
+        return templateSearchResults;
