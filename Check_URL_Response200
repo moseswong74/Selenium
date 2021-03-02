@@ -6,3 +6,42 @@
             int code = connection.getResponseCode();
             System.out.println("Response code of the object is " + code);
             assertEquals(code, 200, "Error due to");
+
+
+    @DataProvider
+    public Object[][] provideHelpData() {
+
+        Object[][] data = {
+                {"Support","https://zsbsupport.zebra.com/s/","Welcome to ZSB Series Support"},
+                {"FAQs","https://zsbsupport.zebra.com/s/faqs"," Frequently Asked Questions "},
+                {"Contact Us", "https://zsbsupport.zebra.com/s/contactsupport","Support Case Submission"},
+        };
+        return data;
+
+    }
+
+
+    @Test(dataProvider = "provideHelpData", dataProviderClass = DataDrivenTestData.class)
+    public void CheckHelpLink(String HelpOptions, String helpURL, String checkHelpString) throws IOException, InterruptedException {
+
+        homepage.clickHelp();
+        assertTrue(help.helpOptionsDisplay(HelpOptions));
+        Reporter.log("===========================================================================================", true);
+        help.clickHelpOption(HelpOptions);
+        URL url = new URL(helpURL);
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+        connection.setRequestMethod("GET");
+        connection.connect();
+        int code = connection.getResponseCode();
+        Reporter.log("Response code of the object is " + code, true);
+        assertEquals(code, 200, "Incorrect URL");
+        ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
+        driver.switchTo().window(tabs2.get(1));
+        sleep(5000); // Delay is needed for browser to stabilized
+        Reporter.log("Check  :"+HelpOptions+" url: " + helpURL + " display text: "+ checkHelpString, true);
+        assertTrue(help.checkURLHelpTitle(checkHelpString));
+        driver.close();
+        driver.switchTo().window(tabs2.get(0));
+        sleep(5000); // Delay is needed for switch Help Option
+
+
